@@ -197,3 +197,22 @@ if __name__ == "__main__":
 
 	#disables overwriting of any previous glyph
 	bk.hold()
+
+	#gets centre co-ordinates of each used rectangle
+	for pr in maxbin.usedRectangles:								
+		b_x=pr.x+pr.width/2
+		b_y=pr.y+pr.height/2
+		x_cor.append(int(b_x))
+		y_cor.append(int(b_y))
+		b_width.append(int(pr.width))
+		b_height.append(int(pr.height))
+
+	#plot on a browser and save output 
+	bk.rect(x_cor,
+		y_cor,
+		b_width,
+		b_height,fill_color="black")
+
+	# open browser and save plot
+	bk.show()
+	bk.save()
