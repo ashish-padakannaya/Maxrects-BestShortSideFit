@@ -1,7 +1,6 @@
 import bokeh.plotting as bk					
 import random
 
-
 #each rectangle in the bin will be initialized in this class
 class Rect:
 	def __init__(self,k=None):
